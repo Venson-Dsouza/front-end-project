@@ -1,0 +1,136 @@
+.card {
+  width: 400px;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 740px) {
+    width: auto;
+    height: 100%;
+  }
+}
+h2 {
+  display: flex;
+  justify-content: center;
+}
+.card-name {
+  background-color: crimson;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+p {
+  color: aliceblue;
+  margin-top: 10px;
+}
+.circle {
+  height: 40%;
+  width: 54%;
+  position: relative;
+  top: 28%;
+  left: 22%;
+}
+.image-container {
+  background-image: url(../images/card-bg.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative;
+  width: 100%;
+  left: 1px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+span {
+  color: aliceblue;
+  position: relative;
+  top: 10%;
+  right: 16%;
+  cursor: pointer;
+}
+.uploaded-image {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 40%;
+  width: 54%;
+  position: absolute;
+  top: 28%;
+  left: 22%;
+  pointer-events: none;
+  z-index: -1;
+}
+.yellowbutton {
+  cursor: pointer;
+  background-color: #f2c309;
+  padding: 1rem 2rem;
+  height: 45px;
+  width: fit-content;
+  border: 0;
+  border-radius: 28px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  display: flex;
+  align-items: center;
+}
+
+.edit-name {
+  height: 30px;
+  color: aliceblue;
+  appearance: none;
+  border: 0;
+  outline: none;
+  text-align: center;
+  background-color: crimson;
+  margin-top: 2px;
+}
+.edit-name::placeholder {
+  color: aliceblue;
+  text-align: center;
+}
+.all-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 7%;
+}
+.controls {
+  display: flex;
+}
+.zoom-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zoom-controls .btn {
+  border: none;
+  font-weight: 300;
+  font-size: 40px;
+  background: none;
+}
+.slider {
+  width: 50%;
+  margin: 0 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  height: 2px;
+  background-color: black;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  cursor: pointer;
+}
