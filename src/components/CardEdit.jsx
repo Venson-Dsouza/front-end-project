@@ -46,7 +46,7 @@ const Cardedit = () => {
   const handleUpdate = async () => {
     try {
       await axios
-        .put(`http://localhost:3001/api/update`, {
+        .put(`https://zany-erin-dragonfly-wrap.cyclic.app/api/update`, {
           name,
           image,
         })

@@ -20,7 +20,9 @@ const Finalcard = () => {
   };
   const fetchData = () => {
     axios
-      .get(`http://localhost:3001/api/user?name=${filename}`)
+      .get(
+        `https://zany-erin-dragonfly-wrap.cyclic.app/api/user?name=${filename}`
+      )
       .then((response) => {
         const { name, image } = response.data;
         setName(name);

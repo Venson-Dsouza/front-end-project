@@ -20,7 +20,7 @@ const Card = () => {
       return;
     }
     axios
-      .post(`http://localhost:3001/api/submit`, {
+      .post(`https://zany-erin-dragonfly-wrap.cyclic.app/api/submit`, {
         name,
         image,
       })
