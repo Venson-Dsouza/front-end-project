@@ -40,7 +40,7 @@ const Cardedit = () => {
     setTimeout(() => {
       setLoading(false);
       navigate(`/finalcard/${name}`);
-    }, 3000);
+    }, 5000);
   };
 
   const handleUpdate = async () => {
