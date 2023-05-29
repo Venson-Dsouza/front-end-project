@@ -3,10 +3,12 @@ import "../css/card.css";
 import axios from "axios";
 import html2canvas from "html2canvas";
 import { useNavigate } from "react-router";
+import loader from "../images/loader.gif";
 
 const Finalcard = () => {
   const [name, setName] = useState("");
   const [image, setImage] = useState(null);
+  const [loading, setLoading] = useState(true);
   var url = window.location.pathname;
   var filename = url.substring(url.lastIndexOf("/") + 1);
   useEffect(() => {
@@ -27,9 +29,11 @@ const Finalcard = () => {
         const { name, image } = response.data;
         setName(name);
         setImage(image);
+        setLoading(false);
       })
       .catch((error) => {
         console.log("Error fetching data:", error);
+        alert("User does'nt exists");
       });
   };
 
@@ -59,7 +63,20 @@ const Finalcard = () => {
         console.error("Error copying link to clipboard:", error);
       });
   };
-
+  if (loading === true) {
+    return (
+      <div className="loader">
+        <img
+          src={loader}
+          alt="Loading"
+          style={{
+            width: "100px",
+            height: "100px",
+          }}
+        />
+      </div>
+    );
+  }
   return (
     <div className="card" id="card-container">
       <h2>Edit Greeting</h2>
